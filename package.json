@@ -1,42 +1,30 @@
 {
-  "name": "com.unity.xr.management",
-  "displayName": "XR Plugin Management",
-  "version": "4.3.3",
+  "name": "com.unity.xr.legacyinputhelpers",
+  "displayName": "XR Legacy Input Helpers",
+  "version": "2.1.10",
   "unity": "2019.4",
-  "unityRelease": "15f1",
-  "description": "Package that provides simple management of XR plug-ins. Manages and offers help with loading, initialization, settings, and build support for XR plug-ins.",
+  "category": "XR",
+  "description": "This package includes the tracked pose driver for the legacy input system, the XR Bindings Seeding Tool and 3Dof Arm Model support for the Tracked Pose Driver. The Tracked Pose Driver is a behavior that enables GameObjects to track input devices, the XR Bindings Seeding Tool adds a menu item under the 'Assets' menu which populates the Input Asset with Unity's crossplatform Input Bindings",
   "keywords": [
-    "xr",
-    "sdk",
-    "ar",
-    "vr",
-    "management",
-    "build",
-    "plugin"
+    "TPD",
+    "Tracked Pose Driver",
+    "XR",
+    "Input",
+    "Helpers"
   ],
   "dependencies": {
-    "com.unity.modules.subsystems": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.unity.xr.legacyinputhelpers": "2.1.7"
-  },
-  "repository": {
-    "url": "https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git",
-    "type": "git",
-    "revision": "11953d1846a70bfe37146dc4655a8b2d93d32b95"
+    "com.unity.modules.xr": "1.0.0"
   },
   "_upm": {
-    "changelog": "### Fixed\n- Settings and Loader names with numbers will now keep the numbers for the generated asset names."
+    "changelog": "Fixed a build error about a mismatch of the serialized fields between Editor and Player due to `m_PoseProviderComponent`. That field and its type is now always included, not just when `ENABLE_AR` or `ENABLE_VR` are defined."
   },
   "upmCi": {
-    "footprint": "e47471cb7ebbf7c240bc0eccde6e675b16d3c6a9"
+    "footprint": "ec826e1c407b5cf442ff158c90ff77e59d147718"
   },
-  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.xr.management@4.3/manual/index.html",
-  "samples": [
-    {
-      "displayName": "Example XR Management implementation",
-      "description": "Example code showing how to implement various portions of the XR Management API.",
-      "path": "Samples~"
-    }
-  ]
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.xr.legacyinputhelpers.git",
+    "type": "git",
+    "revision": "465ee12451634ea2b2986d54f6ae8be37316772a"
+  }
 }
